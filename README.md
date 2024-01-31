@@ -3,7 +3,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/tales-from-a-dev/geocoder-php-adgfr-provider/provider.yml?label=tests&style=for-the-badge)](https://github.com/tales-from-a-dev/geocoder-php-adgfr-provider/actions/workflows/provider.yml)
 ![PHP Version](https://img.shields.io/badge/php->=8.2-4f5b93.svg?style=for-the-badge)
 [![Packagist Version](https://img.shields.io/packagist/v/tales-from-a-dev/geocoder-php-adgfr-provider?style=for-the-badge)](https://packagist.org/packages/tales-from-a-dev/geocoder-php-adgfr-provider)
-[![License](https://img.shields.io/github/license/talesfromadev/geocoder-php-adgfr-provider?style=for-the-badge)](https://github.com/tales-from-a-dev/geocoder-php-adgfr-provider/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/tales-from-a-dev/geocoder-php-adgfr-provider?style=for-the-badge)](https://github.com/tales-from-a-dev/geocoder-php-adgfr-provider/blob/main/LICENSE)
 
 > [Geocoder PHP](https://github.com/geocoder-php/Geocoder) is a PHP library which helps you build geo-aware applications by providing a powerful abstraction layer for geocoding manipulations.
 
