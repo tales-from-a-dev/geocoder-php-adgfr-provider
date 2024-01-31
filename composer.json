@@ -19,7 +19,6 @@
   "require": {
     "php": ">=8.2",
     "geocoder-php/common-http": "^4.6",
-    "symfony/http-client": "^7.0",
     "willdurand/geocoder": "^4.6"
   },
   "provide": {
@@ -30,14 +29,12 @@
     "geocoder-php/provider-integration-tests": "^1.6",
     "php-http/message": "^1.16",
     "phpstan/phpstan": "^1.10",
-    "phpunit/phpunit": "^9.6"
+    "phpunit/phpunit": "^9.6",
+    "symfony/http-client": "^7.0"
   },
   "config": {
     "optimize-autoloader": true,
-    "sort-packages": true,
-    "allow-plugins": {
-      "php-http/discovery": true
-    }
+    "sort-packages": true
   },
   "autoload": {
     "psr-4": {
