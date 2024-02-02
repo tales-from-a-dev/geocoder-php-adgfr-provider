@@ -5,6 +5,7 @@
 [![Packagist Version](https://img.shields.io/packagist/v/tales-from-a-dev/geocoder-php-adgfr-provider?style=for-the-badge)](https://packagist.org/packages/tales-from-a-dev/geocoder-php-adgfr-provider)
 [![License](https://img.shields.io/github/license/tales-from-a-dev/geocoder-php-adgfr-provider?style=for-the-badge)](https://github.com/tales-from-a-dev/geocoder-php-adgfr-provider/blob/main/LICENSE)
 
+> [!NOTE]
 > [Geocoder PHP](https://github.com/geocoder-php/Geocoder) is a PHP library which helps you build geo-aware applications by providing a powerful abstraction layer for geocoding manipulations.
 
 This is the [adresse.data.gouv.fr](https://adresse.data.gouv.fr/) provider for the PHP Geocoder.
