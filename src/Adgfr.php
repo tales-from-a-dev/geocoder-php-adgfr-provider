@@ -19,7 +19,7 @@ use Geocoder\Query\ReverseQuery;
 final class Adgfr extends AbstractHttpProvider
 {
     final public const PROVIDER_NAME = 'adgfr';
-    final public const API_URL = 'https://api-adresse.data.gouv.fr';
+    final public const API_URL = 'https://data.geopf.fr/geocodage';
 
     public function geocodeQuery(GeocodeQuery $query): Collection
     {
@@ -28,16 +28,18 @@ final class Adgfr extends AbstractHttpProvider
             throw new UnsupportedOperation('The Adgfr provider does not support IP addresses.');
         }
 
-        $url = sprintf(
+        $url = \sprintf(
             '%s/search/?%s',
             self::API_URL,
             http_build_query([
                 'q' => $query->getText(),
+                'index' => $query->getData('index'),
                 'limit' => $query->getLimit(),
                 'lat' => $query->getData('lat'),
                 'lon' => $query->getData('lon'),
                 'postcode' => $query->getData('postcode'),
                 'citycode' => $query->getData('citycode'),
+                'depcode' => $query->getData('depcode'),
                 'type' => Type::tryFrom($query->getData('type', ''))?->value,
             ], '', '&', \PHP_QUERY_RFC3986)
         );
@@ -49,12 +51,17 @@ final class Adgfr extends AbstractHttpProvider
     {
         $coordinates = $query->getCoordinates();
 
-        $url = sprintf(
+        $url = \sprintf(
             '%s/reverse/?%s',
             self::API_URL,
             http_build_query([
                 'lat' => $coordinates->getLatitude(),
                 'lon' => $coordinates->getLongitude(),
+                'index' => $query->getData('index'),
+                'limit' => $query->getLimit(),
+                'postcode' => $query->getData('postcode'),
+                'citycode' => $query->getData('citycode'),
+                'type' => Type::tryFrom($query->getData('type', ''))?->value,
             ], '', '&', \PHP_QUERY_RFC3986)
         );
 

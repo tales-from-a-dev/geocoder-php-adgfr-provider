@@ -103,10 +103,10 @@ final class AdgfrTest extends BaseTestCase
         $this->assertInstanceOf(Address::class, $address);
         $this->assertNull($address->getStreetNumber());
         $this->assertNull($address->getStreetName());
-        $this->assertEqualsWithDelta(48.994028, $address->getCoordinates()->getLatitude(), 0.00001);
-        $this->assertEqualsWithDelta(2.509919, $address->getCoordinates()->getLongitude(), 0.00001);
-        $this->assertSame('95700', $address->getPostalCode());
-        $this->assertSame('Roissy-en-France', $address->getLocality());
+        $this->assertEqualsWithDelta(43.631962, $address->getCoordinates()?->getLatitude(), 0.00001);
+        $this->assertEqualsWithDelta(1.380094, $address->getCoordinates()?->getLongitude(), 0.00001);
+        $this->assertSame('31700', $address->getPostalCode());
+        $this->assertSame('Blagnac', $address->getLocality());
     }
 
     public function testReverseWithCoordinates(): void
@@ -120,8 +120,8 @@ final class AdgfrTest extends BaseTestCase
         /** @var AdgfrAddress $result */
         $address = $results->first();
         $this->assertInstanceOf(Address::class, $address);
-        $this->assertEqualsWithDelta(48.850699, $address->getCoordinates()->getLatitude(), 0.00001);
-        $this->assertEqualsWithDelta(2.308628, $address->getCoordinates()->getLongitude(), 0.00001);
+        $this->assertEqualsWithDelta(48.850699, $address->getCoordinates()?->getLatitude(), 0.00001);
+        $this->assertEqualsWithDelta(2.308628, $address->getCoordinates()?->getLongitude(), 0.00001);
         $this->assertSame('20', $address->getStreetNumber());
         $this->assertSame('Avenue de Ségur', $address->getStreetName());
         $this->assertSame('75007', $address->getPostalCode());
